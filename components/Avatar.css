@@ -1,0 +1,23 @@
+/* === AVATAR COMPONENT STYLES === */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    overflow: hidden; /* Para mantener las esquinas de la imagen redondeadas */
+    flex-shrink: 0;
+}
+
+.avatar__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar__initials {
+    font-size: 0.9rem;
+}

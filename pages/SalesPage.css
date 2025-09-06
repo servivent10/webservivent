@@ -1,0 +1,111 @@
+/* === SALES PAGE STYLES === */
+
+.sales-page__actions {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Modal Styles */
+.sales-page__modal .modal {
+    max-width: 900px;
+}
+
+.sales-page__modal fieldset {
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.sales-page__modal fieldset:last-of-type {
+    margin-bottom: 0;
+}
+
+.sales-page__modal legend {
+    padding: 0 0.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.sales-page__product-search-container {
+    position: relative;
+}
+
+.sales-page__search-results {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background-color: var(--content-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    z-index: 10;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.sales-page__search-results li {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sales-page__search-results li:hover {
+    background-color: var(--page-bg);
+}
+
+.sales-page__search-results li strong {
+    color: var(--primary-color);
+}
+
+.sales-page__items-table-container {
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+    overflow: auto;
+}
+
+.sales-page__items-table th {
+    background-color: var(--page-bg);
+}
+
+.sales-page__table-input {
+    width: 60px;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: right;
+}
+
+.sales-page__table-price-display {
+    text-align: right;
+    padding-right: 0.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.sales-page__summary {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 1.25rem;
+    gap: 1rem;
+}
+
+.sales-page__summary strong {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.sales-page__summary span {
+    font-weight: 700;
+    color: var(--text-primary);
+}

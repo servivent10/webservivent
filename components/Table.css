@@ -1,0 +1,68 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/* === SHARED TABLE STYLES === */
+
+/* Contenedor compartido para tablas que actúan como "tarjetas" */
+.table-shared-container {
+    background-color: var(--content-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+}
+
+/* Estilos base para todas las tablas */
+.table-shared {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-shared th,
+.table-shared td {
+    padding: 0.5rem 1rem; /* Padding compacto */
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.table-shared tbody td {
+    font-size: 0.875rem; /* Tamaño de fuente reducido para mayor densidad */
+}
+
+.table-shared th {
+    font-weight: 600;
+    color: var(--sidebar-text); /* White text for contrast */
+    text-transform: uppercase;
+    font-size: 0.75rem; /* Tamaño de fuente de encabezado reducido */
+    background-color: var(--sidebar-bg); /* Dark background like the sidebar */
+}
+
+.table-shared tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Efecto hover para filas que no son de agrupación */
+.table-shared tbody tr:not(.table-group-header):hover {
+    background-color: var(--primary-light-hover); /* Light blue hover */
+}
+
+/* Estilo para filas en las que se puede hacer clic */
+.table-shared .table-row--clickable {
+    cursor: pointer;
+}
+
+/* Estilo para encabezados de grupo dentro de una tabla */
+.table-shared .table-group-header td {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 0.4rem 1rem;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-shared tbody tr:first-child.table-group-header td {
+    border-top: none;
+}

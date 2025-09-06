@@ -1,0 +1,83 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.sale-payment-modal .modal {
+    max-width: 480px;
+}
+
+.sale-payment-modal__summary {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.sale-payment-modal__summary .label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+.sale-payment-modal__summary .value {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+
+.sale-payment-modal .form-group input[type="number"] {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0.75rem;
+    font-weight: 600;
+}
+
+.sale-payment-modal__quick-cash {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    justify-content: center;
+}
+.sale-payment-modal__quick-cash .btn {
+    flex: 1;
+    font-size: 0.9rem;
+    padding: 0.75rem 0.5rem;
+}
+
+.sale-payment-modal__change {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f0fdf4; /* green-50 */
+    border: 1px solid #bbf7d0; /* green-200 */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sale-payment-modal__change .label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #16a34a; /* green-600 */
+}
+.sale-payment-modal__change .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #15803d; /* green-700 */
+}
+
+.sale-payment-modal__payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.sale-payment-modal .modal-footer .btn--primary {
+    min-width: 150px;
+}

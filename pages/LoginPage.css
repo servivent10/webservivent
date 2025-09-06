@@ -1,0 +1,40 @@
+/* === LOGIN PAGE STYLES === */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--page-bg);
+    padding: 2rem;
+}
+
+.login-page__card {
+    background-color: var(--content-bg);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-page__card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.login-page__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.login-page__subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}

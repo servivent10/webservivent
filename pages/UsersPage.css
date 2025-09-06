@@ -1,0 +1,51 @@
+/* === USERS PAGE STYLES === */
+
+.users-page__actions {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.users-page__avatar-upload-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.users-page__avatar-upload-section .avatar {
+    width: 80px;
+    height: 80px;
+}
+
+.users-page__avatar-upload-section .avatar .avatar__initials {
+    font-size: 2rem;
+}
+
+.users-page__avatar-upload-section .form-group {
+    flex-grow: 1;
+}
+
+.users-page__avatar-upload-section input[type="file"] {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.users-page__avatar-upload-section input[type="file"]::file-selector-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease;
+    margin-right: 1rem;
+}
+
+.users-page__avatar-upload-section input[type="file"]::file-selector-button:hover {
+    background-color: var(--border-color);
+}

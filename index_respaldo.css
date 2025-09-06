@@ -1,0 +1,62 @@
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --sidebar-bg: #2d3748; /* Dark grey theme */
+    --sidebar-text: #ffffff;
+    --sidebar-text-hover: #ffffff;
+    --sidebar-active-bg: #4a5568; /* Lighter grey for hover/active */
+    --page-bg: #f7fafc;
+    --content-bg: #ffffff;
+    --text-primary: #2d3748;
+    --text-secondary: #718096;
+    --border-color: #e2e8f0;
+    --error-color: #e53e3e;
+    --danger-color: #dc3545;
+    --danger-hover: #c82333;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    color-scheme: light; /* Ensure form controls are always light-themed */
+}
+
+/* === GLOBAL & BASE STYLES === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+#root {
+    height: 100vh;
+}
+
+/* === UTILITY CLASSES (Forms, Buttons, etc.) === */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+.

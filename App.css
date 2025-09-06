@@ -1,0 +1,34 @@
+/* === MAIN APP LAYOUT STYLES === */
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.app-layout__content-wrapper {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden; /* Evita que el contenedor principal se desplace */
+}
+
+.app-layout__main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Permite que el contenido principal se desplace */
+}
+
+.app-layout__page-header {
+    padding: 1.5rem 2rem 0 2rem;
+    background-color: var(--page-bg);
+}
+
+.app-layout__page-header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.app-layout__page-content {
+    padding: 1.5rem 2rem;
+    flex-grow: 1;
+}

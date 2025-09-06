@@ -1,0 +1,153 @@
+/* === SIDEBAR COMPONENT STYLES === */
+.sidebar {
+    width: 80px; /* Estado colapsado */
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    flex-shrink: 0; /* Evita que la barra lateral se encoja */
+}
+
+.sidebar--expanded {
+    width: 250px; /* Estado expandido */
+}
+
+.sidebar__nav {
+    flex-grow: 1;
+    padding-top: 1.5rem;
+}
+
+.sidebar__nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 0;
+    color: var(--sidebar-text);
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+    position: relative; /* Necesario para el pseudo-elemento ::before y el tooltip */
+}
+
+.sidebar--expanded .sidebar__nav-link {
+    justify-content: flex-start;
+    padding: 0.8rem 1.5rem;
+}
+
+.sidebar__nav-link:hover {
+    background-color: var(--primary-color);
+    color: var(--sidebar-text-hover);
+}
+
+.sidebar__nav-link--active {
+    background-color: var(--primary-color);
+    color: var(--sidebar-text-hover);
+}
+
+.sidebar__nav-link .material-icons {
+    font-size: 24px;
+    min-width: 30px; /* Asegura la alineación del ícono */
+    text-align: center;
+    transition: margin-right 0.3s ease;
+}
+
+.sidebar--expanded .sidebar__nav-link .material-icons {
+    margin-right: 1rem;
+}
+
+.sidebar__nav-label {
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+/* === ACTIVE INDICATOR & TOOLTIP LOGIC === */
+
+/* Default ::before is the active indicator (for expanded view) */
+.sidebar__nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #ffffff;
+    transform: scaleY(0);
+    transition: transform 0.2s ease;
+}
+.sidebar__nav-link--active::before {
+    transform: scaleY(1);
+}
+
+/* Tooltip Body (only visible when collapsed) */
+.sidebar:not(.sidebar--expanded) .sidebar__nav-link::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: var(--sidebar-text);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    /* This margin is critical: it's the arrow's gap (10px) + the arrow's width (6px). */
+    margin-left: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-weight: 500;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s;
+}
+
+/* Override ::before to become an arrow (only when collapsed) */
+.sidebar:not(.sidebar--expanded) .sidebar__nav-link::before {
+    /* Reset active indicator styles */
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    transform: translateY(-50%);
+    left: 100%;
+    top: 50%;
+    
+    /* Create the triangle */
+    border: 6px solid transparent; 
+    border-right-color: var(--primary-color);
+
+    /* Position it to create the cohesive shape */
+    margin-left: 10px; /* This creates the gap from the sidebar */
+    z-index: 101; /* Must be above the tooltip body */
+    
+    /* Hide by default, show on hover */
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s;
+}
+
+/* Show tooltip (body and arrow) on hover when collapsed */
+.sidebar:not(.sidebar--expanded) .sidebar__nav-link:hover::after,
+.sidebar:not(.sidebar--expanded) .sidebar__nav-link:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* === EXPANDED STATE LOGIC === */
+
+/* Hide tooltip body when expanded */
+.sidebar--expanded .sidebar__nav-link::after {
+    display: none;
+}
+
+.sidebar--expanded .sidebar__nav-label {
+    opacity: 1;
+    max-width: 150px;
+}

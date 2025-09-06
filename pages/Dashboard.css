@@ -1,0 +1,40 @@
+/* === DASHBOARD PAGE STYLES === */
+
+.dashboard h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.dashboard__card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.dashboard__summary-card {
+    background-color: var(--content-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+}
+
+.dashboard__card-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-right: 1.5rem;
+}
+
+.dashboard__card-info h3 {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.dashboard__card-info p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}

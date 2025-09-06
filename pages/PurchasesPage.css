@@ -1,0 +1,247 @@
+/* === PURCHASES PAGE STYLES === */
+.purchases-page {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.purchases-page__sidebar {
+    background-color: var(--content-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 1.5rem;
+    padding: 1rem;
+}
+
+.purchases-page__filter-list, .purchases-page__sub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.purchases-page__filter-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    font-weight: 500;
+    color: var(--text-primary);
+    flex-wrap: wrap;
+}
+
+.purchases-page__filter-item:hover {
+    background-color: var(--page-bg);
+}
+
+.purchases-page__filter-item--active {
+    background-color: #e7f1ff; 
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.purchases-page__count-badge {
+    background-color: var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.purchases-page__filter-item--active > .purchases-page__count-badge {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.purchases-page__sub-list {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+    gap: 0.25rem;
+}
+
+.purchases-page__sub-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.purchases-page__sub-item:hover {
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+}
+
+.purchases-page__sub-item--active {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.purchases-page__sub-item--active:hover {
+    background-color: var(--primary-hover);
+    color: white;
+}
+
+.purchases-page__sub-item .purchases-page__count-badge {
+    background-color: var(--border-color);
+    color: var(--text-secondary);
+}
+
+.purchases-page__sub-item--active .purchases-page__count-badge {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+
+/* Main Content Styles */
+.purchases-page__main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.purchases-page__toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+}
+
+.purchases-page__search-container {
+    position: relative;
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.purchases-page__search-container .material-icons {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    pointer-events: none;
+}
+
+.purchases-page__search-container input[type="search"] {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.purchases-page__search-container input[type="search"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.purchases-page__group-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.purchases-page__group-date {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.purchases-page__daily-total-badge {
+    background-color: var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.purchases-page__folio-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.purchases-page__status-icon {
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+.purchases-page__status-icon.status-icon--pending { color: #f97316; } /* Orange */
+.purchases-page__status-icon.status-icon--confirmed { color: #22c55e; } /* Green */
+.purchases-page__status-icon.status-icon--cancelled { color: #ef4444; } /* Red */
+
+.purchases-page__payment-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: 1px solid transparent;
+}
+
+.purchases-page__payment-status .material-icons {
+    font-size: 1rem;
+}
+
+/* Pago Pendiente - Orange/Yellow theme */
+.purchases-page__payment-status.payment-status--pending {
+    background-color: #fffbeb; /* amber-50 */
+    color: #d97706; /* amber-600 */
+    border-color: #fde68a; /* amber-200 */
+}
+
+/* Parcialmente Pagado - Blue theme */
+.purchases-page__payment-status.payment-status--partial {
+    background-color: #eff6ff; /* blue-50 */
+    color: #2563eb; /* blue-600 */
+    border-color: #bfdbfe; /* blue-200 */
+}
+
+/* Pagado - Green theme */
+.purchases-page__payment-status.payment-status--paid {
+    background-color: #f0fdf4; /* green-50 */
+    color: #16a34a; /* green-600 */
+    border-color: #bbf7d0; /* green-200 */
+}
+
+
+@media (max-width: 992px) {
+    .purchases-page {
+        grid-template-columns: 1fr;
+    }
+    .purchases-page__sidebar {
+        position: static;
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 576px) {
+    .purchases-page__toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .purchases-page__search-container {
+        max-width: none;
+    }
+}

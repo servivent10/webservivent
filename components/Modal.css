@@ -1,0 +1,63 @@
+/* === MODAL COMPONENT STYLES === */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal {
+    background-color: var(--content-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh; /* Límite de altura */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 1.5rem;
+    flex-shrink: 0;
+     /* ...otros estilos existentes... */
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text); /* Cambia el color del texto del título */
+}
+
+.modal__header .btn-icon {
+    color: var(--sidebar-text);
+}
+
+.modal__header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Generic body and footer for modal content */
+.modal-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex-grow: 1; /* Allows the body to take up available space */
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+    flex-shrink: 0;
+}

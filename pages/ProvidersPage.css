@@ -1,0 +1,74 @@
+/* === PROVIDERS PAGE STYLES === */
+
+.providers-page__actions {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.providers-page__logo-upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.providers-page__logo-upload-section .provider-avatar {
+    width: 80px;
+    height: 80px;
+}
+
+.providers-page__logo-upload-section .provider-avatar .provider-avatar__initials {
+    font-size: 2rem;
+}
+
+.providers-page__logo-upload-section input[type="file"] {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.providers-page__logo-upload-section input[type="file"]::file-selector-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease;
+    margin-right: 1rem;
+}
+
+.providers-page__logo-upload-section input[type="file"]::file-selector-button:hover {
+    background-color: var(--border-color);
+}
+
+/* Modal specific styles */
+.providers-page__modal .modal {
+    max-width: 800px;
+}
+
+.providers-page__modal-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.providers-page__modal-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.providers-page__form-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.providers-page__form-row .form-group {
+    flex: 1;
+}

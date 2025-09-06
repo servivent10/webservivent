@@ -1,0 +1,7 @@
+/* === BRANCHES PAGE STYLES === */
+
+.branches-page__actions {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
